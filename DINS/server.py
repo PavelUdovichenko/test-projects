@@ -30,7 +30,7 @@ def handle(client):
             broadcast(message)
         except:
             # cut off the failed client from our client list
-            index = client.index(client)
+            index = clients.index(client)
             clients.remove(client)
             client.close()
             nickname = nicknames[index]
